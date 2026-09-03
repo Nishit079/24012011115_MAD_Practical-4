@@ -24,12 +24,34 @@ The application integrates core Android framework components:
 
 ## 📸 Screenshots & UI Flow
 
-> **Note:** Place your application screenshots inside the [`screenshots/`](file:///d:/AndroidStudioProjects/24012011115_MAD_Practical4/screenshots) directory with matching filenames (`screen1_main.png`, `screen2_timepicker.png`, `screen3_alarm_set.png`, `screen4_notification.png`).
-
-| 1. Home / Main Screen | 2. Time Picker Dialog | 3. Alarm Active State | 4. Foreground Notification |
-| :---: | :---: | :---: | :---: |
-| <img src="screenshots/screen1_main.png" alt="Home Screen" width="220"/> | <img src="screenshots/screen2_timepicker.png" alt="Time Picker" width="220"/> | <img src="screenshots/screen3_alarm_set.png" alt="Alarm Set" width="220"/> | <img src="screenshots/screen4_notification.png" alt="Alarm Notification" width="220"/> |
-| Displays current live digital clock & "Create Alarm" button | Interactive 12-hour AM/PM dialog for user time selection | Reveals bottom card with scheduled time & Cancel button | Ongoing low-priority notification during audio playback |
+<table align="center">
+  <tr>
+    <th align="center">1. Main Screen</th>
+    <th align="center">2. Time Picker Dialog</th>
+    <th align="center">3. Alarm Set (Active)</th>
+    <th align="center">4. Alarm Cancelled</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/ss1.png" alt="Main Screen" width="220"/>
+    </td>
+    <td align="center">
+      <img src="screenshots/ss2.png" alt="Time Picker Dialog" width="220"/>
+    </td>
+    <td align="center">
+      <img src="screenshots/ss3.png" alt="Alarm Set State" width="220"/>
+    </td>
+    <td align="center">
+      <img src="screenshots/ss4.png" alt="Alarm Cancelled" width="220"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">Live digital clock &amp; "Create Alarm" button</td>
+    <td align="center">12-hour AM/PM dialog for user time selection</td>
+    <td align="center">Bottom card visible with scheduled time &amp; Toast</td>
+    <td align="center">Alarm stopped, card dismissed &amp; Toast shown</td>
+  </tr>
+</table>
 
 ---
 
