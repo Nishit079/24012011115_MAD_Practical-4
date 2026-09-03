@@ -33,16 +33,16 @@ The application integrates core Android framework components:
   </tr>
   <tr>
     <td align="center">
-      <img src="screenshots/ss1.png" alt="Main Screen" width="220"/>
+      <img src="screenshots/SS1.png" alt="Main Screen" width="220"/>
     </td>
     <td align="center">
-      <img src="screenshots/ss2.png" alt="Time Picker Dialog" width="220"/>
+      <img src="screenshots/SS2.png" alt="Time Picker Dialog" width="220"/>
     </td>
     <td align="center">
-      <img src="screenshots/ss3.png" alt="Alarm Set State" width="220"/>
+      <img src="screenshots/SS3.png" alt="Alarm Set State" width="220"/>
     </td>
     <td align="center">
-      <img src="screenshots/ss4.png" alt="Alarm Cancelled" width="220"/>
+      <img src="screenshots/SS4.png" alt="Alarm Cancelled" width="220"/>
     </td>
   </tr>
   <tr>
