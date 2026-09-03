@@ -33,42 +33,7 @@ The application integrates core Android framework components:
 
 ---
 
-## ⚙️ How It Works (Step-by-Step)
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor User
-    participant Activity as MainActivity
-    participant AlarmMgr as AlarmManager (System)
-    participant Receiver as AlarmBroadcastReceiver
-    participant Service as AlarmService
-    participant Player as MediaPlayer
-
-    User->>Activity: Clicks "Create Alarm"
-    Activity->>User: Displays TimePickerDialog (12-hour format)
-    User->>Activity: Selects target hour & minute
-    Activity->>Activity: Validates timestamp (adds 1 day if selected time is in the past)
-    Activity->>AlarmMgr: Schedules PendingIntent with setExact(RTC_WAKEUP, timestamp)
-    Activity->>User: Displays active card with formatted alarm time
-
-    Note over AlarmMgr: Waits until scheduled timestamp is reached...
-
-    AlarmMgr->>Receiver: Sends Broadcast intent (Action: "Service1" = "Start")
-    Receiver->>Service: Starts Foreground Service (ContextCompat.startForegroundService)
-    Service->>Service: Initializes NotificationChannel & posts Notification
-    Service->>Player: Loads R.raw.alarm and begins looping audio
-
-    opt User Cancels Alarm
-        User->>Activity: Clicks "Cancel Alarm"
-        Activity->>AlarmMgr: Cancels scheduled PendingIntent
-        Activity->>Receiver: Sends Broadcast intent ("Service1" = "Stop")
-        Receiver->>Service: Requests stopService()
-        Service->>Player: Stops & releases MediaPlayer resources
-        Service->>Service: stopForeground(REMOVE) & stopSelf()
-        Activity->>Activity: Hides alarm active card
-    end
-```
 
 ### Detailed Component Roles
 
@@ -109,39 +74,6 @@ sequenceDiagram
 
 ---
 
-## 📂 Project Directory Structure
-
-```text
-24012011115_MAD_Practical4/
-│
-├── app/
-│   ├── src/
-│   │   └── main/
-│   │       ├── AndroidManifest.xml                  # App manifest & permissions
-│   │       ├── java/com/example/a24012011115_mad_practical_4/
-│   │       │   ├── MainActivity.kt                  # UI, TimePicker & AlarmManager logic
-│   │       │   ├── AlarmBroadcastReceiver.kt         # BroadcastReceiver for alarm events
-│   │       │   └── AlarmService.kt                  # Foreground service & MediaPlayer
-│   │       └── res/
-│   │           ├── drawable/
-│   │           │   └── img_alarm_banner.png         # UI decorative illustration
-│   │           ├── layout/
-│   │           │   └── activity_main.xml            # Main layout with Material Cards & Clock
-│   │           ├── raw/
-│   │           │   └── alarm.mp3                    # Alarm audio sound file
-│   │           └── values/
-│   │               ├── colors.xml                   # Application color palette
-│   │               ├── strings.xml                  # Localized UI string resources
-│   │               └── themes.xml                   # Material 3 application theme
-│   └── build.gradle.kts                             # App-level dependencies & configuration
-│
-├── screenshots/                                     # Folder for application demo screenshots
-├── gradle/libs.versions.toml                        # Version catalog for dependencies & plugins
-├── build.gradle.kts                                 # Project-level build script
-└── README.md                                        # Documentation and project walkthrough
-```
-
----
 
 ## 🚀 Getting Started & Installation
 
