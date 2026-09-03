@@ -8,7 +8,7 @@
 ## 🎯 Aim
 > **Create an Android Alarm application by using service & Broadcast Receiver**
 
-
+---
 
 ## 📱 Project Overview
 
@@ -55,8 +55,6 @@ The application integrates core Android framework components:
 
 ---
 
-
-
 ### Detailed Component Roles
 
 1. **`MainActivity.kt`**:
@@ -95,7 +93,6 @@ The application integrates core Android framework components:
 | `android.permission.POST_NOTIFICATIONS` | API 33+ (Android 13+) | Required for displaying the foreground notification to the user. |
 
 ---
-
 
 ## 🚀 Getting Started & Installation
 
